@@ -1,0 +1,78 @@
+* サーバとMySQL
+** サーバ，はじめました
+   nakatani@cloko002.sc.iis.u-tokyo.ac.jp を皆に使ってもらおうとしてます．
+   OpenSSH の公開鍵をくれれば，
+   #+BEGIN_SRC sh
+$ ssh  -i ペアの秘密鍵  nakatani@cloko002.sc.iis.u-tokyo.ac.jp
+   #+END_SRC
+   でログインできるようにします．
+
+** サーバ使用上の主な制約
+   - rootになれない(中谷はなれるけどあんまりならない)．
+     - perlにせよ何にせよインストールする時はソースからインストールが基本．
+       root権限なしなインストールは中谷がかなり慣れているので聞いてください．
+   - スイッチのFWで開いているポートが制限されている．
+     - 22 (ssh), 80 (http), 443 (https) は使えるけど，それ以外は外部からはListenできない．
+       3306 (mysql) なんかも当然Listenしてくれないので， *ポートフォーワードが必要* (後述)．
+   - サーバは研究室の関係者との共有財．
+     - *使用前に常にwコマンドやtopコマンドで他のユーザの使用状況を確認する．*
+   - 色々面倒なので，作業はあまりサーバでは行わない．サーバ上でやることはこのくらい．
+     - MySQLの管理
+     - Perlの管理
+     - git pull
+     - *エディタ開いてまったりコード編集とかは基本的にギルティ*
+   - /home/nakatani には中谷の大事なデータが入ってるのであまり見ない&弄らないで下さい．
+     - /home/nakatani/beercolle を我々の基本的な作業場にし，その下を好きに汚して下さい．
+
+** ログイン方法
+   #+BEGIN_SRC sh
+$ ssh  -i ペアの秘密鍵  nakatani@cloko002.sc.iis.u-tokyo.ac.jp
+$ cd beercolle    # 汚して良いのはbeercolleディレクトリ以下のみ!!!!
+$ source beercolle/git/beercolle/server/setting.sh  # 便利なエイリアスとかが登録されてる
+   #+END_SRC
+
+** ディレクトリ構成
+   /home/nakatani/beercolle より上のpathは触らない&気にしない方向でお願いします．
+
+   - /home/nakatani/beercolle :: 我々のメインの活動場所
+   - /home/nakatani/beercolle/mysql/conf :: my.cnf が入ってる
+   - /home/nakatani/beercolle/mysql/data ::
+     MySQLのいわゆるdatadir． *エラーログ・スローログもここに吐かれる．*
+   - /home/nakatani/beercolle/git ::
+     git clone するものは全部ここに置くようにしてください．
+   - /home/nakatani/beercolle/git/beercolle ::
+     このマニュアルの入っているリポジトリ
+   - /home/nakatani/beercolle/local ::
+     ソースからコンパイルしたもののインストール先．
+     #+BEGIN_SRC sh
+$ ./configure --prefix=/home/nakatani/beercolle/local && make && make install
+     #+END_SRC
+     とかやることを想定．
+
+** MySQL使用方法
+*** mysqldの立ち上げ
+    基本的に /mysqld/ は常に立っているようにしておくけど，もしもお亡くなりになっていたら次のように立ち上げてください．
+     #+BEGIN_SRC sh
+$ mysqld &
+     #+END_SRC
+    もし "コマンドが見つかりません" とか言われたら，
+     #+BEGIN_SRC sh
+$ source /home/nakatani/beercolle/git/beercolle/server/setting.sh
+     #+END_SRC
+    をちゃんとやったかを確認してください．
+
+*** cloko002から接続
+     #+BEGIN_SRC sh
+$ mysql -u root -p
+     #+END_SRC
+    MySQLのrootパスワードは *bi-rukorekushon* の 'o' を '0' に， 'i' を '1' に入れ替えたものです．
+
+*** 外部から接続
+    そんなに外部から接続したいケースもないような気もするけど，もししたいときのために．
+    L3スイッチでFWが働いていて，外部から3306番ポートにアクセスできません．
+    従って， *ポートフォワーディング* が必要になります．
+
+    #+BEGIN_SRC sh
+$ ssh -L 9999:127.0.0.1:3306 -N -f nakatani@cloko002.sc.iis.u-tokyo.ac.jp
+$ mysql -u root --port=9999 -h 127.0.0.1 -p
+    #+END_SRC
