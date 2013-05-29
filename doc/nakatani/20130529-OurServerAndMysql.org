@@ -76,3 +76,6 @@ $ mysql -u root -p
 $ ssh -L 9999:127.0.0.1:3306 -N -f nakatani@cloko002.sc.iis.u-tokyo.ac.jp
 $ mysql -u root --port=9999 -h 127.0.0.1 -p
     #+END_SRC
+
+*** 使用DB
+    "use beercolle" して，その下にテーブルを作るようにして下さい．
