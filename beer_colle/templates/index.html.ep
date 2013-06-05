@@ -1,0 +1,13 @@
+% layout 'default';
+% title 'BeerColle';
+% if($user){
+    Welcome <%= $user->{name} %><br/>
+    <%= link_to Logout => 'logout' %><br/>
+
+    Your friend:<br/>
+%   foreach my $friend (@$friends){
+    <%= $friend->{name} %><br/>
+%   }
+%}else{
+    <%= link_to Login => 'login' %>
+%}
