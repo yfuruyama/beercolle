@@ -1,10 +1,14 @@
-package BeerColle::Auth;
+package BeerColle::Controller::Auth;
 use Mojo::Base 'Mojolicious::Controller';
 use Facebook::Graph;
 
 sub index {
     my $self = shift;
     my ($user, $friends);
+
+    #デバッグ用
+    my $model = $self->model;
+    $self->app->log->info("Model: $model->single()");
 
     #ログイン済みでアクセストークンを持っているか確認
     if(my $access_token = $self->session('access_token')){

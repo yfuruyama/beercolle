@@ -1,7 +1,10 @@
--- ユーザーはFacebookのIDで管理
--- Facebook以外のアカウントでもログインできるように拡張するなら別のキーを考える
+-- ユーザーはランダムに生成するunique_idで管理
+-- screen_nameは後からユーザーに入力してもらう
+-- fb_id, tw_idはFacebook, Twitterが管理しているそれぞれでの固有ID
 
 create table User (
-  fb_id INTEGER PRIMARY KEY,
-  fb_access_token VARCHAR(256)
+  unique_id VARCHAR(128) PRIMARY KEY,
+  screen_name VARCHAR(128),
+  fb_id VARCHAR(128),
+  tw_id VARCHAR(128)
 )
