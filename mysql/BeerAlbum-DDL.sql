@@ -3,6 +3,7 @@ create table BeerAlbum (
   beer_id INTEGER NOT NULL,
   rating DECIMAL(3,2),  -- From 1.00 to 5.00 (like Tabelog)
   note TEXT,
+  tstamp TIMESTAMP,     -- 登録時刻
 
   -- 官能評価
   appearance VARCHAR(32),
