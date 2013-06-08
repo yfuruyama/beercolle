@@ -52,8 +52,7 @@
     
     // save
     NSError *error = nil;
-    [context save:&error];
-    if (error != nil) {
+    if (![context save:&error]) {
         Log(@"context save error");
     }
 }

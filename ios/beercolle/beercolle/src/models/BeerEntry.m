@@ -19,9 +19,6 @@
 #pragma mark Class method
 + (NSMutableArray *)getAllBeerEntriesWithContext:(NSManagedObjectContext *)context
 {
-    //AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    NSSortDescriptor *sortDescriptor;
     NSFetchRequest *request = [CoreDataUtil createFetchRequestForEntity:@"BeerEntry"
                                                                 context:context
                                                               predicate:nil
@@ -34,7 +31,6 @@
     }
     
     return results;
-//NSMutableArray *bookList = [Book getBookListOnMonth:dateComp withContext:appDelegate.managedObjectContext ascending:NO];
 }
 
 @end

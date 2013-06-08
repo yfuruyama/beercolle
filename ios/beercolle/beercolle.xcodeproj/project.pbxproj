@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25035D56176327AA00EF87EC /* MasterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D55176327AA00EF87EC /* MasterData.m */; };
+		25035D5A1763414B00EF87EC /* masterdata in Resources */ = {isa = PBXBuildFile; fileRef = 25035D591763414B00EF87EC /* masterdata */; };
+		25035D5D1763595F00EF87EC /* BeerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D5C1763595F00EF87EC /* BeerMaster.m */; };
+		25035D60176359C000EF87EC /* BreweryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D5F176359C000EF87EC /* BreweryMaster.m */; };
+		25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D62176359D600EF87EC /* BeerStyleMaster.m */; };
+		25035D66176359F000EF87EC /* CountryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D65176359F000EF87EC /* CountryMaster.m */; };
 		2564BDEC175DD85E0050391C /* BeerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEB175DD85E0050391C /* BeerEntry.m */; };
 		2564BDEF175DDC3E0050391C /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEE175DDC3E0050391C /* Util.m */; };
 		2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDF1175DFB290050391C /* CoreDataUtil.m */; };
@@ -28,6 +34,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25035D54176327AA00EF87EC /* MasterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterData.h; sourceTree = "<group>"; };
+		25035D55176327AA00EF87EC /* MasterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterData.m; sourceTree = "<group>"; };
+		25035D591763414B00EF87EC /* masterdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = masterdata; sourceTree = "<group>"; };
+		25035D5B1763595F00EF87EC /* BeerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerMaster.h; sourceTree = "<group>"; };
+		25035D5C1763595F00EF87EC /* BeerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerMaster.m; sourceTree = "<group>"; };
+		25035D5E176359C000EF87EC /* BreweryMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreweryMaster.h; sourceTree = "<group>"; };
+		25035D5F176359C000EF87EC /* BreweryMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreweryMaster.m; sourceTree = "<group>"; };
+		25035D61176359D600EF87EC /* BeerStyleMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerStyleMaster.h; sourceTree = "<group>"; };
+		25035D62176359D600EF87EC /* BeerStyleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerStyleMaster.m; sourceTree = "<group>"; };
+		25035D64176359F000EF87EC /* CountryMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryMaster.h; sourceTree = "<group>"; };
+		25035D65176359F000EF87EC /* CountryMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryMaster.m; sourceTree = "<group>"; };
 		2564BDEA175DD85E0050391C /* BeerEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerEntry.h; sourceTree = "<group>"; };
 		2564BDEB175DD85E0050391C /* BeerEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerEntry.m; sourceTree = "<group>"; };
 		2564BDED175DDC3E0050391C /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
@@ -87,8 +104,18 @@
 		2564BDE0175DA7CC0050391C /* models */ = {
 			isa = PBXGroup;
 			children = (
+				25035D64176359F000EF87EC /* CountryMaster.h */,
+				25035D65176359F000EF87EC /* CountryMaster.m */,
+				25035D61176359D600EF87EC /* BeerStyleMaster.h */,
+				25035D62176359D600EF87EC /* BeerStyleMaster.m */,
+				25035D5E176359C000EF87EC /* BreweryMaster.h */,
+				25035D5F176359C000EF87EC /* BreweryMaster.m */,
 				2564BDEA175DD85E0050391C /* BeerEntry.h */,
 				2564BDEB175DD85E0050391C /* BeerEntry.m */,
+				25035D54176327AA00EF87EC /* MasterData.h */,
+				25035D55176327AA00EF87EC /* MasterData.m */,
+				25035D5B1763595F00EF87EC /* BeerMaster.h */,
+				25035D5C1763595F00EF87EC /* BeerMaster.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -105,6 +132,7 @@
 		2564BDE2175DA8CA0050391C /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				25035D591763414B00EF87EC /* masterdata */,
 				2564BDE3175DA8D30050391C /* img */,
 			);
 			path = resources;
@@ -243,6 +271,7 @@
 				25A2CB0317525B230022DD7C /* Default@2x.png in Resources */,
 				25A2CB0517525B230022DD7C /* Default-568h@2x.png in Resources */,
 				25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */,
+				25035D5A1763414B00EF87EC /* masterdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +291,11 @@
 				2564BDEF175DDC3E0050391C /* Util.m in Sources */,
 				2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */,
 				25E1CBDC1762A83800758B9A /* BeerListCell.m in Sources */,
+				25035D56176327AA00EF87EC /* MasterData.m in Sources */,
+				25035D5D1763595F00EF87EC /* BeerMaster.m in Sources */,
+				25035D60176359C000EF87EC /* BreweryMaster.m in Sources */,
+				25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */,
+				25035D66176359F000EF87EC /* CountryMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

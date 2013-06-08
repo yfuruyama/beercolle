@@ -23,7 +23,28 @@
 
     MasterViewController *masterViewController = [[MasterViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    
+    // CoreData
+    // 1. check whether this boot is initial boot
+    self.dbPath = @"beercolle.sqlite";
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:self.dbPath];
+    BOOL isInitialBoot = FALSE;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        Log(@"initial boot");
+        isInitialBoot = TRUE;
+    } else {
+        Log(@"not initial boot");
+    }
+    
+    // 2. create managedObjectContext and persistentStoreCoordinator
+    // NOTE: After this statement, sqlite file is definetely exist.
     masterViewController.managedObjectContext = self.managedObjectContext;
+    
+    // 3. if initial boot, initialize master data
+    if (isInitialBoot) {
+        [MasterData initMasterData];
+    }
+    
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -109,7 +130,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"beercolle.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:self.dbPath];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
