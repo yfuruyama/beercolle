@@ -13,6 +13,7 @@
 #import <CoreData/CoreData.h>
 #import "CoreDataUtil.h"
 #import "BeerEntry.h"
+#import "BeerListCell.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

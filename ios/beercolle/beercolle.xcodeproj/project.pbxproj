@@ -23,6 +23,8 @@
 		25A2CB0817525B230022DD7C /* beercolle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0617525B230022DD7C /* beercolle.xcdatamodeld */; };
 		25A2CB0B17525B230022DD7C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0A17525B230022DD7C /* MasterViewController.m */; };
 		25A2CB0E17525B230022DD7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0D17525B230022DD7C /* DetailViewController.m */; };
+		25E1CBDC1762A83800758B9A /* BeerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1CBDB1762A83800758B9A /* BeerListCell.m */; };
+		25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 25E1CBDD1762AE4600758B9A /* sample-beer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +45,17 @@
 		25A2CAFC17525B230022DD7C /* beercolle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beercolle-Prefix.pch"; sourceTree = "<group>"; };
 		25A2CAFD17525B230022DD7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25A2CAFE17525B230022DD7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		25A2CB0017525B230022DD7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/img/Default.png; sourceTree = "<group>"; };
-		25A2CB0217525B230022DD7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resources/img/Default@2x.png"; sourceTree = "<group>"; };
-		25A2CB0417525B230022DD7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/img/Default-568h@2x.png"; sourceTree = "<group>"; };
+		25A2CB0017525B230022DD7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		25A2CB0217525B230022DD7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		25A2CB0417525B230022DD7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		25A2CB0717525B230022DD7C /* beercolle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beercolle.xcdatamodel; sourceTree = "<group>"; };
 		25A2CB0917525B230022DD7C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		25A2CB0A17525B230022DD7C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		25A2CB0C17525B230022DD7C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		25A2CB0D17525B230022DD7C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		25E1CBDA1762A83800758B9A /* BeerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerListCell.h; sourceTree = "<group>"; };
+		25E1CBDB1762A83800758B9A /* BeerListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerListCell.m; sourceTree = "<group>"; };
+		25E1CBDD1762AE4600758B9A /* sample-beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-beer.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,8 @@
 		2564BDE1175DA7D10050391C /* views */ = {
 			isa = PBXGroup;
 			children = (
+				25E1CBDA1762A83800758B9A /* BeerListCell.h */,
+				25E1CBDB1762A83800758B9A /* BeerListCell.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -100,17 +107,18 @@
 			children = (
 				2564BDE3175DA8D30050391C /* img */,
 			);
-			name = resources;
+			path = resources;
 			sourceTree = "<group>";
 		};
 		2564BDE3175DA8D30050391C /* img */ = {
 			isa = PBXGroup;
 			children = (
+				25E1CBDD1762AE4600758B9A /* sample-beer.png */,
 				25A2CB0017525B230022DD7C /* Default.png */,
 				25A2CB0217525B230022DD7C /* Default@2x.png */,
 				25A2CB0417525B230022DD7C /* Default-568h@2x.png */,
 			);
-			name = img;
+			path = img;
 			sourceTree = "<group>";
 		};
 		2564BDE4175DA92A0050391C /* src */ = {
@@ -234,6 +242,7 @@
 				25A2CB0117525B230022DD7C /* Default.png in Resources */,
 				25A2CB0317525B230022DD7C /* Default@2x.png in Resources */,
 				25A2CB0517525B230022DD7C /* Default-568h@2x.png in Resources */,
+				25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +261,7 @@
 				2564BDEC175DD85E0050391C /* BeerEntry.m in Sources */,
 				2564BDEF175DDC3E0050391C /* Util.m in Sources */,
 				2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */,
+				25E1CBDC1762A83800758B9A /* BeerListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

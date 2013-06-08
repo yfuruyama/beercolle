@@ -11,3 +11,20 @@ Xcode 共同開発
 - XCodeプロジェクト内で見えるディレクトリツリーと、実際のファイルシステムにあるディレクトリツリーは対応していない
     - 混乱のもとになるのでなるべく対応させるように気をつける(同名のディレクトリ名(Xcode内ではグループ名)を付けるなど)
 - project.pbxprojは自動マージさせるべきではないらしい(プロジェクトが壊れる？)が、とりあえず様子見
+
+ガイドライン
+------------
+Coding Style:
+- GoogleのObjective-C Coding Style
+- http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml
+
+
+
+memo
+------
+2013/6/8
+- アプリ名
+    - MyBeerCellar みたいなのはどうか
+        - 自分だけのビールのコレクションという意味合いから
+        - homebrew(Macのパッケージ管理システム)もCellarという単語を使ってる
+        - ワインセラーとは言うけど、ビールセラーとは言わない？？

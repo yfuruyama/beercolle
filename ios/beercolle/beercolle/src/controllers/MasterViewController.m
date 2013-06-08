@@ -21,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         //self.title = NSLocalizedString(@"Master", @"Master");
-        self.title = @"Beer Colle!";
+        self.title = @"My Cellar";
     }
     return self;
 }
@@ -83,24 +83,19 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BeerListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[BeerListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         NSManagedObjectContext *context = [CoreDataUtil getManagedObjectContext];
         NSMutableArray *beerEntries = [BeerEntry getAllBeerEntriesWithContext:context];
         BeerEntry *beer = [beerEntries objectAtIndex:indexPath.row];
         
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 40)];
-        nameLabel.text = beer.name;
-        nameLabel.backgroundColor = [UIColor clearColor];
-        [cell addSubview:nameLabel];
-        
-        UILabel *breweryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 20, 300, 40)];
-        breweryLabel.text = beer.brewery;
-        breweryLabel.backgroundColor = [UIColor clearColor];
-        [cell addSubview:breweryLabel];
+        UIImage *thumbnail = [UIImage imageNamed:@"sample-beer.png"];
+        cell.thumbnail.image = thumbnail;
+        cell.nameLabel.text = beer.name;
+        cell.breweryLabel.text = beer.brewery;
     }
 
     [self configureCell:cell atIndexPath:indexPath];
@@ -109,7 +104,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 80;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
