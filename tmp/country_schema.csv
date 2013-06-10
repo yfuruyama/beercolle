@@ -1,0 +1,4 @@
+Field	Type	Null	Key	Default	Extra
+id	char(2)	NO	PRI	NULL	
+j_name	varchar(64)	NO	UNI	NULL	
+e_name	varchar(64)	NO	UNI	NULL	

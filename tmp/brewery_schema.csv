@@ -1,0 +1,8 @@
+Field	Type	Null	Key	Default	Extra
+id	int(11)	NO	PRI	NULL	auto_increment
+j_name	varchar(128)	NO		NULL	
+e_name	varchar(128)	NO		NULL	
+furigana	varchar(128)	NO		NULL	
+country_id	char(2)	NO	MUL	NULL	
+j_state	varchar(64)	YES		NULL	
+e_state	varchar(64)	YES		NULL	
