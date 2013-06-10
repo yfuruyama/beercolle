@@ -1,0 +1,30 @@
+{
+  "beers": [
+    {
+      "id": 1,
+      "j_name": "アンバーエール",
+      "e_name": "Amber Ale",
+      "furigana": "あんばーえーる",
+      "style_id1": 1,
+      "style_id2": null,
+      "style_id3": null,
+      "brewery_id": 1,
+      "abv": 5.2,
+      "ibu": 10,
+      "srm": 20
+    },
+    {
+      "id": 2,
+      "j_name": "ゴールデンエール",
+      "e_name": "Golden Ale",
+      "furigana": "ごーるでんえーる",
+      "style_id1": 1,
+      "style_id2": null,
+      "style_id3": null,
+      "brewery_id": 1,
+      "abv": 6.2,
+      "ibu": 20,
+      "srm": 30
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'beercolle' target in the 'beercolle' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
+
+#ifndef __OPTIMIZE__
+#   define Log(format, ...) NSLog((@"%s[Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__) // for Debug
+#else
+#   define Log(...) {} // for Release
+#endif
+
+
+/*
+ * Macro used in whole app
+ */
+// Screen Size
+#define STATUS_BAR_HEIGHT (20.0)
+#define SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height-STATUS_BAR_HEIGHT)
+// Color
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]

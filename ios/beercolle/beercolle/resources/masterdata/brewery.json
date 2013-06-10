@@ -1,0 +1,13 @@
+{
+  "breweries": [
+    {
+      "id": 1,
+      "j_name": "サンクトガーレン",
+      "e_name": "Sankt Gallen",
+      "furigana": "さんくとがーれん",
+      "country_id": "ja",
+      "j_state": "東京",
+      "e_state": "Tokyo"
+    }
+  ]
+}

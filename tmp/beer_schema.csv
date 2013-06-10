@@ -1,0 +1,12 @@
+Field	Type	Null	Key	Default	Extra
+id	int(11)	NO	PRI	NULL	auto_increment
+j_name	varchar(128)	NO		NULL	
+e_name	varchar(128)	NO		NULL	
+furigana	varchar(128)	NO		NULL	
+style_id1	int(11)	NO	MUL	NULL	
+style_id2	int(11)	YES	MUL	NULL	
+style_id3	int(11)	YES	MUL	NULL	
+brewery_id	int(11)	NO	MUL	NULL	
+ABV	decimal(3,1)	YES		NULL	
+IBU	int(11)	YES		NULL	
+SRM	decimal(3,1)	YES		NULL	
