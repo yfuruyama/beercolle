@@ -8,49 +8,34 @@ use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
 use JSON;
 use Data::Dumper;
 
-{
-    my $schema_file;
-    GetOptions(
-        "schema|s=s" => \$schema_file,
-    );
-
-    # read schema and rows
-    my @schema = parse_mysql_schema($schema_file);
-    my $rows = read_rows(\@schema);
-
-    # output
-    my $json = JSON->new->allow_nonref->pretty;
-    print $json->encode($rows);
-}
-
 sub parse_mysql_schema {
-    my $schema_file = shift;
     my $csv = Text::CSV_XS->new({sep_char=>'	'});
-    open FH, "<", $schema_file;
+    my $fh = shift;
 
     # skip header
-    <FH>;
+    <$fh>;
 
     my @schema;
-    while (<FH>) {
+    while (<$fh>) {
         next unless $csv->parse($_);
         my($field, $type) = $csv->fields;
+        $type =~ s/(.*)\(.*\)/$1/;
         my $column = {
             field => $field,
             type => $type
         };
         push(@schema, $column);
     }
-    return @schema;
+    return \@schema;
 }
 
 sub read_rows {
-    my $schema = shift;
+    my($schema, $fh) = @_;
     # set binary=>1 to parse Japanese
     my $csv = Text::CSV_XS->new({binary=>1});
 
     my @rows;
-    while (<>) {
+    while (<$fh>) {
         next unless $csv->parse($_);
         my @fields = $csv->fields;
         my %row;
@@ -71,9 +56,35 @@ sub mysql_type_to_native_type {
         return undef;
     }
 
-    if ($mysql_type =~ /char.*|varchar.*/) {
+    if ($mysql_type =~ /char|varchar/) {
         return $value;
-    } elsif ($mysql_type =~ /int.*|decimal.*/) {
+    } elsif ($mysql_type =~ /int|decimal/) {
         return $value + 0;
     }
+}
+
+sub out_json {
+    my($rows, $fh) = @_;
+    my $json = JSON->new->allow_nonref->pretty;
+    print $fh $json->encode($rows);
+}
+
+sub main {
+    my $schema_file;
+    GetOptions(
+        "schema|s=s" => \$schema_file,
+    );
+
+    # read schema and rows
+    open my $fh, "<", $schema_file or die;
+    my $schema = parse_mysql_schema($fh);
+    my $rows = read_rows($schema, *STDIN);
+
+    # output
+    out_json($rows, *STDOUT);
+}
+
+# executed if this script is executed directly. 
+unless (caller) {
+    main();
 }
