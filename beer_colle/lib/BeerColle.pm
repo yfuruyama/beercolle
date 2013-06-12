@@ -9,6 +9,7 @@ sub startup {
     my $config = $self->plugin('Config', {file => 'beercolle.conf'});
 
     $self->attr(db => sub{ BeerColle::DB->new($config->{db}) } );
+    $self->attr(secret => $config->{secret});
 
     $self->helper(
         facebook => sub{
@@ -33,6 +34,7 @@ sub startup {
   $r->get('/login')->to('auth#login');
   $r->get('/callback')->to('auth#callback');
   $r->get('/logout')->to('auth#logout');
+  $r->post('/signin')->to('auth#signin');
 }
 
 1;
