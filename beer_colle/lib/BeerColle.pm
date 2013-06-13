@@ -1,18 +1,23 @@
 package BeerColle;
 use Mojo::Base 'Mojolicious';
+use BeerColle::DB;
+use BeerColle::Model;
 
 # This method will run once at server start
 sub startup {
     my $self = shift;
+    my $config = $self->plugin('Config', {file => 'beercolle.conf'});
+
+    $self->attr(db => sub{ BeerColle::DB->new($config->{db}) } );
 
     $self->helper(
-        'facebook' => sub{
-            my $c = shift;
-            my $fb = Facebook::Graph->new(
-                app_id => '131156153751414',
-                secret => '64d3412a6a479ce63c1bab7aa75f58ef',
-                postback => 'http://localhost:3000/callback'
-            );
+        facebook => sub{
+            return Facebook::Graph->new($config->{facebook});
+        }
+    );
+    $self->helper(
+        'model' => sub{
+            return BeerColle::Model->new($self->db);
         }
     );
 
@@ -22,6 +27,7 @@ sub startup {
   # Router
   my $r = $self->routes;
 
+  $r->namespaces(['BeerColle::Controller']);
   # Normal route to controller
   $r->get('/')->to('auth#index');
   $r->get('/login')->to('auth#login');
