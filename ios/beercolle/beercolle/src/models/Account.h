@@ -12,4 +12,6 @@
 
 @interface Account : NSObject
 
++ (void)requestUserAccount;
++ (void)getUserAccount;
 @end

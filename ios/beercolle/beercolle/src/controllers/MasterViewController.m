@@ -55,6 +55,10 @@
     if (![context save:&error]) {
         Log(@"context save error");
     }
+    
+    //Log(@"%@", [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"SHA256Secret"]);
+    Log(@"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SHA256Secret"]);
+    //[Account requestUserAccount];
 }
 
 - (void)didReceiveMemoryWarning
