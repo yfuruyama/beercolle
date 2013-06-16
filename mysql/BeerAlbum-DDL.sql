@@ -1,5 +1,6 @@
 create table BeerAlbum (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  user_id INTEGER NOT NULL, -- 本サービス内でユニークなユーザID
   beer_id INTEGER NOT NULL,
   rating DECIMAL(3,2),  -- From 1.00 to 5.00 (like Tabelog)
   note TEXT,
@@ -12,5 +13,6 @@ create table BeerAlbum (
   taste VARCHAR(32),
 
   -- Foreign keys
+  foreign key(user_id) references User(unique_id),
   foreign key(beer_id) references Beer(id)
 )
