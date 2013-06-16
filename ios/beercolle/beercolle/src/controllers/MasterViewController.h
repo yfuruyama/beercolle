@@ -14,6 +14,8 @@
 #import "CoreDataUtil.h"
 #import "BeerEntry.h"
 #import "BeerListCell.h"
+#import "Account.h"
+#import "Auth.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
