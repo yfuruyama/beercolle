@@ -10,10 +10,16 @@ sub new{
     bless {};
 }
 
-sub single{
-    my $self = shift;
-    my $number = $_db->single('user', {service => 'Facebook'});
-    return $number;
+#fb_idもtw_idも登録されていない新規のユーザー登録
+sub insert_new_user{
+    my ($self, $service, $id) = @_;
+    my $row;
+    if ($service eq 'facebook'){
+        $row = $_db->find_or_create('User', {fb_id => $id});
+    }
+    elsif ($service eq 'twitter'){
+        $row = $_db->find_or_create('User', {tw_id => $id});
+    }
 }
 
 1;
