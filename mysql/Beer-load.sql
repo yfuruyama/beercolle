@@ -46,6 +46,7 @@ set
 -- 2. Create table
 create table Beer (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  is_master BOOL NOT NULL,
   j_name VARCHAR(128) NOT NULL,
   e_name VARCHAR(128) NOT NULL,
   furigana VARCHAR(128) NOT NULL,
@@ -67,6 +68,7 @@ create table Beer (
 -- 3. Load joined data from BrewerExcel, BeerStyle, Brewery
 as select
   NULL id,
+  1,
   BeerExcel.j_name,
   BeerExcel.e_name,
   BeerExcel.furigana,

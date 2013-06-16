@@ -26,6 +26,7 @@ load data infile "/home/nakatani/beercolle/git/beercolle/mysql/Brewery.csv"
 -- 2. Create table
 create table Brewery (
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  is_master BOOL NOT NULL,
   j_name VARCHAR(128) NOT NULL,
   e_name VARCHAR(128) NOT NULL,
   furigana VARCHAR(128) NOT NULL,
@@ -39,6 +40,7 @@ create table Brewery (
 -- 3. Load joined data from BrewerExcel & Country
 as select
   NULL id,
+  1,
   B.j_name,
   B.e_name,
   B.furigana,
