@@ -7,50 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25035D56176327AA00EF87EC /* MasterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D55176327AA00EF87EC /* MasterData.m */; };
-		25035D5A1763414B00EF87EC /* masterdata in Resources */ = {isa = PBXBuildFile; fileRef = 25035D591763414B00EF87EC /* masterdata */; };
-		25035D5D1763595F00EF87EC /* BeerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D5C1763595F00EF87EC /* BeerMaster.m */; };
-		25035D60176359C000EF87EC /* BreweryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D5F176359C000EF87EC /* BreweryMaster.m */; };
-		25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D62176359D600EF87EC /* BeerStyleMaster.m */; };
-		25035D66176359F000EF87EC /* CountryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D65176359F000EF87EC /* CountryMaster.m */; };
-		2564BDEC175DD85E0050391C /* BeerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEB175DD85E0050391C /* BeerEntry.m */; };
-		2564BDEF175DDC3E0050391C /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEE175DDC3E0050391C /* Util.m */; };
-		2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDF1175DFB290050391C /* CoreDataUtil.m */; };
+		2572331417688CDD00FB48B7 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 2572331317688CDD00FB48B7 /* src */; };
 		25A2CAED17525B230022DD7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A2CAEC17525B230022DD7C /* UIKit.framework */; };
 		25A2CAEF17525B230022DD7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A2CAEE17525B230022DD7C /* Foundation.framework */; };
 		25A2CAF117525B230022DD7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A2CAF017525B230022DD7C /* CoreGraphics.framework */; };
 		25A2CAF317525B230022DD7C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A2CAF217525B230022DD7C /* CoreData.framework */; };
 		25A2CAF917525B230022DD7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25A2CAF717525B230022DD7C /* InfoPlist.strings */; };
-		25A2CAFB17525B230022DD7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CAFA17525B230022DD7C /* main.m */; };
-		25A2CAFF17525B230022DD7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CAFE17525B230022DD7C /* AppDelegate.m */; };
-		25A2CB0117525B230022DD7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A2CB0017525B230022DD7C /* Default.png */; };
-		25A2CB0317525B230022DD7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A2CB0217525B230022DD7C /* Default@2x.png */; };
-		25A2CB0517525B230022DD7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A2CB0417525B230022DD7C /* Default-568h@2x.png */; };
 		25A2CB0817525B230022DD7C /* beercolle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0617525B230022DD7C /* beercolle.xcdatamodeld */; };
-		25A2CB0B17525B230022DD7C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0A17525B230022DD7C /* MasterViewController.m */; };
-		25A2CB0E17525B230022DD7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2CB0D17525B230022DD7C /* DetailViewController.m */; };
-		25E1CBDC1762A83800758B9A /* BeerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E1CBDB1762A83800758B9A /* BeerListCell.m */; };
-		25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 25E1CBDD1762AE4600758B9A /* sample-beer.png */; };
+		25CFF014176DC71C002B56DD /* img in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF00E176DC71C002B56DD /* img */; };
+		25CFF015176DC71C002B56DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF00F176DC71C002B56DD /* Default-568h@2x.png */; };
+		25CFF016176DC71C002B56DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF010176DC71C002B56DD /* Default.png */; };
+		25CFF017176DC71C002B56DD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF011176DC71C002B56DD /* Default@2x.png */; };
+		25CFF018176DC71C002B56DD /* sample-beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF012176DC71C002B56DD /* sample-beer.png */; };
+		25CFF019176DC71C002B56DD /* masterdata in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF013176DC71C002B56DD /* masterdata */; };
+		25E8FD8E176DC17200C4F2BD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E8FD8D176DC17200C4F2BD /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25035D54176327AA00EF87EC /* MasterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterData.h; sourceTree = "<group>"; };
-		25035D55176327AA00EF87EC /* MasterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterData.m; sourceTree = "<group>"; };
-		25035D591763414B00EF87EC /* masterdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = masterdata; sourceTree = "<group>"; };
-		25035D5B1763595F00EF87EC /* BeerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerMaster.h; sourceTree = "<group>"; };
-		25035D5C1763595F00EF87EC /* BeerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerMaster.m; sourceTree = "<group>"; };
-		25035D5E176359C000EF87EC /* BreweryMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreweryMaster.h; sourceTree = "<group>"; };
-		25035D5F176359C000EF87EC /* BreweryMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreweryMaster.m; sourceTree = "<group>"; };
-		25035D61176359D600EF87EC /* BeerStyleMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerStyleMaster.h; sourceTree = "<group>"; };
-		25035D62176359D600EF87EC /* BeerStyleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerStyleMaster.m; sourceTree = "<group>"; };
-		25035D64176359F000EF87EC /* CountryMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryMaster.h; sourceTree = "<group>"; };
-		25035D65176359F000EF87EC /* CountryMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryMaster.m; sourceTree = "<group>"; };
-		2564BDEA175DD85E0050391C /* BeerEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerEntry.h; sourceTree = "<group>"; };
-		2564BDEB175DD85E0050391C /* BeerEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerEntry.m; sourceTree = "<group>"; };
-		2564BDED175DDC3E0050391C /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		2564BDEE175DDC3E0050391C /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		2564BDF0175DFB290050391C /* CoreDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataUtil.h; sourceTree = "<group>"; };
-		2564BDF1175DFB290050391C /* CoreDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataUtil.m; sourceTree = "<group>"; };
+		2572331317688CDD00FB48B7 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 		25A2CAE917525B230022DD7C /* beercolle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beercolle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A2CAEC17525B230022DD7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25A2CAEE17525B230022DD7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,21 +32,15 @@
 		25A2CAF217525B230022DD7C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		25A2CAF617525B230022DD7C /* beercolle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "beercolle-Info.plist"; sourceTree = "<group>"; };
 		25A2CAF817525B230022DD7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		25A2CAFA17525B230022DD7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
 		25A2CAFC17525B230022DD7C /* beercolle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beercolle-Prefix.pch"; sourceTree = "<group>"; };
-		25A2CAFD17525B230022DD7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		25A2CAFE17525B230022DD7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		25A2CB0017525B230022DD7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		25A2CB0217525B230022DD7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		25A2CB0417525B230022DD7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		25A2CB0717525B230022DD7C /* beercolle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beercolle.xcdatamodel; sourceTree = "<group>"; };
-		25A2CB0917525B230022DD7C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		25A2CB0A17525B230022DD7C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		25A2CB0C17525B230022DD7C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		25A2CB0D17525B230022DD7C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		25E1CBDA1762A83800758B9A /* BeerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerListCell.h; sourceTree = "<group>"; };
-		25E1CBDB1762A83800758B9A /* BeerListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerListCell.m; sourceTree = "<group>"; };
-		25E1CBDD1762AE4600758B9A /* sample-beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-beer.png"; sourceTree = "<group>"; };
+		25CFF00E176DC71C002B56DD /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img; path = resources/img; sourceTree = "<group>"; };
+		25CFF00F176DC71C002B56DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/img/Default-568h@2x.png"; sourceTree = "<group>"; };
+		25CFF010176DC71C002B56DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/img/Default.png; sourceTree = "<group>"; };
+		25CFF011176DC71C002B56DD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resources/img/Default@2x.png"; sourceTree = "<group>"; };
+		25CFF012176DC71C002B56DD /* sample-beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sample-beer.png"; path = "resources/img/sample-beer.png"; sourceTree = "<group>"; };
+		25CFF013176DC71C002B56DD /* masterdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = masterdata; path = resources/masterdata; sourceTree = "<group>"; };
+		25E8FD8D176DC17200C4F2BD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E8FD8E176DC17200C4F2BD /* Social.framework in Frameworks */,
 				25A2CAED17525B230022DD7C /* UIKit.framework in Frameworks */,
 				25A2CAEF17525B230022DD7C /* Foundation.framework in Frameworks */,
 				25A2CAF117525B230022DD7C /* CoreGraphics.framework in Frameworks */,
@@ -90,81 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2564BDDF175DA7C30050391C /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				25A2CB0917525B230022DD7C /* MasterViewController.h */,
-				25A2CB0A17525B230022DD7C /* MasterViewController.m */,
-				25A2CB0C17525B230022DD7C /* DetailViewController.h */,
-				25A2CB0D17525B230022DD7C /* DetailViewController.m */,
-			);
-			path = controllers;
-			sourceTree = "<group>";
-		};
-		2564BDE0175DA7CC0050391C /* models */ = {
-			isa = PBXGroup;
-			children = (
-				25035D64176359F000EF87EC /* CountryMaster.h */,
-				25035D65176359F000EF87EC /* CountryMaster.m */,
-				25035D61176359D600EF87EC /* BeerStyleMaster.h */,
-				25035D62176359D600EF87EC /* BeerStyleMaster.m */,
-				25035D5E176359C000EF87EC /* BreweryMaster.h */,
-				25035D5F176359C000EF87EC /* BreweryMaster.m */,
-				2564BDEA175DD85E0050391C /* BeerEntry.h */,
-				2564BDEB175DD85E0050391C /* BeerEntry.m */,
-				25035D54176327AA00EF87EC /* MasterData.h */,
-				25035D55176327AA00EF87EC /* MasterData.m */,
-				25035D5B1763595F00EF87EC /* BeerMaster.h */,
-				25035D5C1763595F00EF87EC /* BeerMaster.m */,
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		2564BDE1175DA7D10050391C /* views */ = {
-			isa = PBXGroup;
-			children = (
-				25E1CBDA1762A83800758B9A /* BeerListCell.h */,
-				25E1CBDB1762A83800758B9A /* BeerListCell.m */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		2564BDE2175DA8CA0050391C /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				25035D591763414B00EF87EC /* masterdata */,
-				2564BDE3175DA8D30050391C /* img */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
-		2564BDE3175DA8D30050391C /* img */ = {
-			isa = PBXGroup;
-			children = (
-				25E1CBDD1762AE4600758B9A /* sample-beer.png */,
-				25A2CB0017525B230022DD7C /* Default.png */,
-				25A2CB0217525B230022DD7C /* Default@2x.png */,
-				25A2CB0417525B230022DD7C /* Default-568h@2x.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		2564BDE4175DA92A0050391C /* src */ = {
-			isa = PBXGroup;
-			children = (
-				2564BDE0175DA7CC0050391C /* models */,
-				2564BDE1175DA7D10050391C /* views */,
-				2564BDDF175DA7C30050391C /* controllers */,
-				25A2CAFD17525B230022DD7C /* AppDelegate.h */,
-				25A2CAFE17525B230022DD7C /* AppDelegate.m */,
-				2564BDED175DDC3E0050391C /* Util.h */,
-				2564BDEE175DDC3E0050391C /* Util.m */,
-				2564BDF0175DFB290050391C /* CoreDataUtil.h */,
-				2564BDF1175DFB290050391C /* CoreDataUtil.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		25A2CAE017525B230022DD7C = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +79,7 @@
 		25A2CAEB17525B230022DD7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25E8FD8D176DC17200C4F2BD /* Social.framework */,
 				25A2CAEC17525B230022DD7C /* UIKit.framework */,
 				25A2CAEE17525B230022DD7C /* Foundation.framework */,
 				25A2CAF017525B230022DD7C /* CoreGraphics.framework */,
@@ -196,7 +91,7 @@
 		25A2CAF417525B230022DD7C /* beercolle */ = {
 			isa = PBXGroup;
 			children = (
-				2564BDE4175DA92A0050391C /* src */,
+				2572331317688CDD00FB48B7 /* src */,
 				25A2CAF517525B230022DD7C /* Supporting Files */,
 			);
 			path = beercolle;
@@ -205,14 +100,26 @@
 		25A2CAF517525B230022DD7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2564BDE2175DA8CA0050391C /* resources */,
+				25CFF00D176DC70E002B56DD /* resources */,
 				25A2CB0617525B230022DD7C /* beercolle.xcdatamodeld */,
 				25A2CAF617525B230022DD7C /* beercolle-Info.plist */,
 				25A2CAF717525B230022DD7C /* InfoPlist.strings */,
-				25A2CAFA17525B230022DD7C /* main.m */,
 				25A2CAFC17525B230022DD7C /* beercolle-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25CFF00D176DC70E002B56DD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				25CFF00E176DC71C002B56DD /* img */,
+				25CFF00F176DC71C002B56DD /* Default-568h@2x.png */,
+				25CFF010176DC71C002B56DD /* Default.png */,
+				25CFF011176DC71C002B56DD /* Default@2x.png */,
+				25CFF012176DC71C002B56DD /* sample-beer.png */,
+				25CFF013176DC71C002B56DD /* masterdata */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A2CAF917525B230022DD7C /* InfoPlist.strings in Resources */,
-				25A2CB0117525B230022DD7C /* Default.png in Resources */,
-				25A2CB0317525B230022DD7C /* Default@2x.png in Resources */,
-				25A2CB0517525B230022DD7C /* Default-568h@2x.png in Resources */,
-				25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */,
-				25035D5A1763414B00EF87EC /* masterdata in Resources */,
+				2572331417688CDD00FB48B7 /* src in Resources */,
+				25CFF014176DC71C002B56DD /* img in Resources */,
+				25CFF015176DC71C002B56DD /* Default-568h@2x.png in Resources */,
+				25CFF016176DC71C002B56DD /* Default.png in Resources */,
+				25CFF017176DC71C002B56DD /* Default@2x.png in Resources */,
+				25CFF018176DC71C002B56DD /* sample-beer.png in Resources */,
+				25CFF019176DC71C002B56DD /* masterdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,20 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A2CAFB17525B230022DD7C /* main.m in Sources */,
-				25A2CAFF17525B230022DD7C /* AppDelegate.m in Sources */,
 				25A2CB0817525B230022DD7C /* beercolle.xcdatamodeld in Sources */,
-				25A2CB0B17525B230022DD7C /* MasterViewController.m in Sources */,
-				25A2CB0E17525B230022DD7C /* DetailViewController.m in Sources */,
-				2564BDEC175DD85E0050391C /* BeerEntry.m in Sources */,
-				2564BDEF175DDC3E0050391C /* Util.m in Sources */,
-				2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */,
-				25E1CBDC1762A83800758B9A /* BeerListCell.m in Sources */,
-				25035D56176327AA00EF87EC /* MasterData.m in Sources */,
-				25035D5D1763595F00EF87EC /* BeerMaster.m in Sources */,
-				25035D60176359C000EF87EC /* BreweryMaster.m in Sources */,
-				25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */,
-				25035D66176359F000EF87EC /* CountryMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,10 +268,12 @@
 		25A2CB1817525B230022DD7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yuuki Furuyama (A5V3XDNH4S)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "beercolle/beercolle-Prefix.pch";
 				INFOPLIST_FILE = "beercolle/beercolle-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A79A6094-CA62-4ED0-9BF0-8730D0697CC8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
