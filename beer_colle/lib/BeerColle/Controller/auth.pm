@@ -1,7 +1,7 @@
 package BeerColle::Controller::Auth;
 use Mojo::Base 'Mojolicious::Controller';
 use Facebook::Graph;
-use BeerColle::Util qw/hash_sha256/;
+use BeerColle::Util qw/check_hash/;
 
 sub index {
     my $self = shift;
@@ -54,16 +54,15 @@ sub signin {
 
     #POSTされたJSONからハッシュが一致するかチェック
     my $auth = $self->req->json->{auth};
-    my $hash = BeerColle::Util::hash_sha256($auth->{id}, $self->app->secret);
-    unless (BeerColle::Util::hash_sha256($auth->{id}, $self->app->secret) eq $auth->{hash}){
+    unless (BeerColle::Util::check_hash($auth->{id}, $self->app->secret, $auth->{hash})){
         #403 Forbidden
         $self->render(text => 'Authorization error', status => 403);
         return;
     }
-    
+
     #新規のユーザー登録
     $self->model->insert_new_user($auth->{service}, $auth->{id});
-    #200 OK 
+    #200 OK
     $self->render(text => 'Accept signin', status => 200);
 }
 1;

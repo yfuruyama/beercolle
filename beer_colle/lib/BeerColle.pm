@@ -34,7 +34,7 @@ sub startup {
   $r->get('/login')->to('auth#login');
   $r->get('/callback')->to('auth#callback');
   $r->get('/logout')->to('auth#logout');
-  $r->post('/signin')->to('auth#signin');
+  $r->post('/api/signin')->to('auth#signin');
 }
 
 1;
