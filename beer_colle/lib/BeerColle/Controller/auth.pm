@@ -1,7 +1,6 @@
 package BeerColle::Controller::Auth;
 use Mojo::Base 'Mojolicious::Controller';
 use Facebook::Graph;
-use BeerColle::Util qw/check_hash/;
 
 sub index {
     my $self = shift;
@@ -46,23 +45,5 @@ sub logout {
     my $self = shift;
     $self->session('access_token' => undef);
     $self->redirect_to('/');
-}
-
-#iPhoneからのサインイン
-sub signin {
-    my $self = shift;
-
-    #POSTされたJSONからハッシュが一致するかチェック
-    my $auth = $self->req->json->{auth};
-    unless (BeerColle::Util::check_hash($auth->{id}, $self->app->secret, $auth->{hash})){
-        #403 Forbidden
-        $self->render(text => 'Authorization error', status => 403);
-        return;
-    }
-
-    #新規のユーザー登録
-    $self->model->insert_new_user($auth->{service}, $auth->{id});
-    #200 OK
-    $self->render(text => 'Accept signin', status => 200);
 }
 1;
