@@ -37,7 +37,7 @@
         };
         
         NSDictionary *options = @{
-            ACFacebookAppIdKey: @"190137684485316",
+            ACFacebookAppIdKey: [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FacebookAppIdKey"],
             ACFacebookPermissionsKey: @[@"email"]
             //ACFacebookPermissionsKey: @[@"user_about_me"] // user_about_meを指定すると実機上でアカウント情報が何も得られなかった
         };
