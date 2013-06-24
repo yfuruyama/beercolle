@@ -13,6 +13,12 @@
 		25035D60176359C000EF87EC /* BreweryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D5F176359C000EF87EC /* BreweryMaster.m */; };
 		25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D62176359D600EF87EC /* BeerStyleMaster.m */; };
 		25035D66176359F000EF87EC /* CountryMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 25035D65176359F000EF87EC /* CountryMaster.m */; };
+		2532E02B17781E34007F96D9 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532E02A17781E34007F96D9 /* TopViewController.m */; };
+		2532E02E17782919007F96D9 /* twitter_logo_300x300.png in Resources */ = {isa = PBXBuildFile; fileRef = 2532E02C17782919007F96D9 /* twitter_logo_300x300.png */; };
+		2532E02F17782919007F96D9 /* facebook_logo_100x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 2532E02D17782919007F96D9 /* facebook_logo_100x100.png */; };
+		2532E0341778389C007F96D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2532E0331778389C007F96D9 /* QuartzCore.framework */; };
+		2532E03A177838D7007F96D9 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2532E037177838D7007F96D9 /* SVProgressHUD.bundle */; };
+		2532E03B177838D7007F96D9 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532E039177838D7007F96D9 /* SVProgressHUD.m */; };
 		2564BDEC175DD85E0050391C /* BeerEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEB175DD85E0050391C /* BeerEntry.m */; };
 		2564BDEF175DDC3E0050391C /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDEE175DDC3E0050391C /* Util.m */; };
 		2564BDF2175DFB290050391C /* CoreDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2564BDF1175DFB290050391C /* CoreDataUtil.m */; };
@@ -49,6 +55,14 @@
 		25035D62176359D600EF87EC /* BeerStyleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerStyleMaster.m; sourceTree = "<group>"; };
 		25035D64176359F000EF87EC /* CountryMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryMaster.h; sourceTree = "<group>"; };
 		25035D65176359F000EF87EC /* CountryMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryMaster.m; sourceTree = "<group>"; };
+		2532E02917781E34007F96D9 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		2532E02A17781E34007F96D9 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		2532E02C17782919007F96D9 /* twitter_logo_300x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo_300x300.png; sourceTree = "<group>"; };
+		2532E02D17782919007F96D9 /* facebook_logo_100x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo_100x100.png; sourceTree = "<group>"; };
+		2532E0331778389C007F96D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2532E037177838D7007F96D9 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		2532E038177838D7007F96D9 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		2532E039177838D7007F96D9 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		2564BDEA175DD85E0050391C /* BeerEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerEntry.h; sourceTree = "<group>"; };
 		2564BDEB175DD85E0050391C /* BeerEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerEntry.m; sourceTree = "<group>"; };
 		2564BDED175DDC3E0050391C /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2532E0341778389C007F96D9 /* QuartzCore.framework in Frameworks */,
 				25CD6C64176DCE3E0038637F /* Accounts.framework in Frameworks */,
 				25CD6C62176DCE1A0038637F /* Social.framework in Frameworks */,
 				25A2CAED17525B230022DD7C /* UIKit.framework in Frameworks */,
@@ -102,6 +117,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2532E035177838D7007F96D9 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2532E036177838D7007F96D9 /* SVProgressHUD */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		2532E036177838D7007F96D9 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2532E037177838D7007F96D9 /* SVProgressHUD.bundle */,
+				2532E038177838D7007F96D9 /* SVProgressHUD.h */,
+				2532E039177838D7007F96D9 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		2564BDDF175DA7C30050391C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +142,8 @@
 				25A2CB0A17525B230022DD7C /* MasterViewController.m */,
 				25A2CB0C17525B230022DD7C /* DetailViewController.h */,
 				25A2CB0D17525B230022DD7C /* DetailViewController.m */,
+				2532E02917781E34007F96D9 /* TopViewController.h */,
+				2532E02A17781E34007F96D9 /* TopViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -155,6 +190,8 @@
 		2564BDE3175DA8D30050391C /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2532E02C17782919007F96D9 /* twitter_logo_300x300.png */,
+				2532E02D17782919007F96D9 /* facebook_logo_100x100.png */,
 				25E1CBDD1762AE4600758B9A /* sample-beer.png */,
 				25A2CB0017525B230022DD7C /* Default.png */,
 				25A2CB0217525B230022DD7C /* Default@2x.png */,
@@ -201,6 +238,7 @@
 		25A2CAEB17525B230022DD7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2532E0331778389C007F96D9 /* QuartzCore.framework */,
 				25CD6C63176DCE3E0038637F /* Accounts.framework */,
 				25CD6C61176DCE1A0038637F /* Social.framework */,
 				25A2CAEC17525B230022DD7C /* UIKit.framework */,
@@ -215,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				2564BDE4175DA92A0050391C /* src */,
+				2532E035177838D7007F96D9 /* vendor */,
 				25A2CAF517525B230022DD7C /* Supporting Files */,
 			);
 			path = beercolle;
@@ -290,6 +329,9 @@
 				25A2CB0517525B230022DD7C /* Default-568h@2x.png in Resources */,
 				25E1CBDE1762AE4600758B9A /* sample-beer.png in Resources */,
 				25035D5A1763414B00EF87EC /* masterdata in Resources */,
+				2532E02E17782919007F96D9 /* twitter_logo_300x300.png in Resources */,
+				2532E02F17782919007F96D9 /* facebook_logo_100x100.png in Resources */,
+				2532E03A177838D7007F96D9 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +358,8 @@
 				25035D63176359D600EF87EC /* BeerStyleMaster.m in Sources */,
 				25035D66176359F000EF87EC /* CountryMaster.m in Sources */,
 				25CD6C67176DDACF0038637F /* Auth.m in Sources */,
+				2532E02B17781E34007F96D9 /* TopViewController.m in Sources */,
+				2532E03B177838D7007F96D9 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

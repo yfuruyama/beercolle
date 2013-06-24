@@ -25,7 +25,6 @@ Coding Style:
 memo
 ------
 2013/6/8
-
 - アプリ名
     - MyBeerCellar みたいなのはどうか
         - 自分だけのビールのコレクションという意味合いから
@@ -55,3 +54,23 @@ memo
     - iPhoneサイドのtwitter or facebook認証(サーバサイドとの連携もしたい)
     - クライアントサイドのテーブル定義
     - iPhoneアプリのワイヤーフレーム構想
+
+2013/6/17
+- SHA256
+    - iOSでの実装
+        - http://www.raywenderlich.com/6475/basic-security-in-ios-5-tutorial-part-1
+    - シークレットの使い方わからん
+- facebook uidの取得
+    - http://stackoverflow.com/questions/14951984/get-facebook-uid-from-acaccountstore-in-ios
+
+2013/6/24
+- ローディング画面
+    - https://github.com/samvermette/SVProgressHUD
+    - http://dev.classmethod.jp/smartphone/ios-loading-svprogresshud/
+- facebookのid調べる方法
+    - https://graph.facebook.com/furuyamayuuki にアクセスするだけ
+    - 得られた値: 100001722643317
+- twitterのuser id調べる方法
+    - https://twitter.com/addsict にアクセスするとたまにtext/javascriptで返ってくる
+    - init_dataのuserIdという項目をみる
+    - 得られた値: 195981993

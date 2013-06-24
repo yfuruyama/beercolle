@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MasterData.h"
+#import "TopViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -22,5 +23,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) TopViewController *topViewController;
 
 @end

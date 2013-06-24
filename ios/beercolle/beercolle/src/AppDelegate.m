@@ -19,10 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
 
     MasterViewController *masterViewController = [[MasterViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    self.navigationController.navigationBar.tintColor = BEER_COLOR;
+    self.topViewController = [[TopViewController alloc] init];
     
     // CoreData
     // 1. check whether this boot is initial boot
@@ -47,6 +48,7 @@
     
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    [self.window.rootViewController presentViewController:self.topViewController animated:NO completion:nil];
     return YES;
 }
 

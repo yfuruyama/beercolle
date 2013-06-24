@@ -12,6 +12,6 @@
 
 @interface Account : NSObject
 
-+ (void)requestUserAccount;
++ (void)requestAccountWithType:(NSString *)typeIdentifier viewController:(UIViewController *)viewController;
 + (void)getUserAccount;
 @end
