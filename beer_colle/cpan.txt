@@ -2,3 +2,6 @@ Mojolicious
 Facebook::Graph
 DBIx::Skinny
 DBD::mysql
+DateTime::Format::Strptime
+DateTime::Format::MySQL
+Test::mysqld
